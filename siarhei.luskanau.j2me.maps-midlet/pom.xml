@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<groupId>siarhei.luskanau.j2me</groupId>
+	<version>0.0.1</version>
+	<artifactId>siarhei.luskanau.j2me.maps-midlet</artifactId>
+	<modelVersion>4.0.0</modelVersion>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<org.microemu.version>2.0.4</org.microemu.version>
+
+		<j2me.midlet.vendor>Siarhei Luskanau</j2me.midlet.vendor>
+		<j2me.midlet.name>Maps (Siarhei Luskanau)</j2me.midlet.name>
+		<j2me.midlet.version>1.0.0</j2me.midlet.version>
+		<j2me.midlet.configuration>CLDC-1.1</j2me.midlet.configuration>
+		<j2me.midlet.profile>MIDP-2.0</j2me.midlet.profile>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>codecafe.dev-hda.com</id>
+			<url>http://codecafe.dev-hda.com/repository</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.microemu</groupId>
+			<artifactId>cldcapi11</artifactId>
+			<version>${org.microemu.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.microemu</groupId>
+			<artifactId>midpapi20</artifactId>
+			<version>${org.microemu.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.microemu</groupId>
+			<artifactId>microemu-jsr-75</artifactId>
+			<version>${org.microemu.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.microemu</groupId>
+			<artifactId>microemu-jsr-82</artifactId>
+			<version>${org.microemu.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.microedition</groupId>
+			<artifactId>jsr-179</artifactId>
+			<version>1.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>siarhei.luskanau.j2me</groupId>
+			<artifactId>siarhei.luskanau.j2me.lwuit</artifactId>
+			<version>1.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>siarhei.luskanau.j2me</groupId>
+			<artifactId>siarhei.luskanau.j2me.core</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>siarhei.luskanau.j2me</groupId>
+			<artifactId>siarhei.luskanau.j2me.map</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.3</source>
+					<target>1.1</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>com.pyx4me</groupId>
+				<artifactId>j2me-maven-plugin</artifactId>
+				<version>${org.microemu.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>package</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<useWtkLibs>false</useWtkLibs>
+					<proguardPreverify>true</proguardPreverify>
+					<proguard>true</proguard>
+					<obfuscate>true</obfuscate>
+					<midlets>
+						<MIDlet>
+							<name>Maps (Siarhei Luskanau)</name>
+							<icon></icon>
+							<class>siarhei.luskanau.j2me.maps.MapsMIDlet</class>
+						</MIDlet>
+					</midlets>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+</project>
