@@ -11,8 +11,9 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>siarhei.luskanau.j2me.lwuit</module>
 		<module>siarhei.luskanau.j2me.core</module>
+		<module>siarhei.luskanau.j2me.jsr179</module>
+		<module>siarhei.luskanau.j2me.lwuit</module>
 		<module>siarhei.luskanau.j2me.map</module>
 		<module>siarhei.luskanau.j2me.maploader</module>
 		<module>siarhei.luskanau.j2me.maps-midlet</module>
