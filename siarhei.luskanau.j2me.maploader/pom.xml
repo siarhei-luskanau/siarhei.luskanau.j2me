@@ -19,13 +19,6 @@
 		<j2me.midlet.profile>MIDP-2.0</j2me.midlet.profile>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>codecafe.dev-hda.com</id>
-			<url>http://codecafe.dev-hda.com/repository</url>
-		</repository>
-	</repositories>
-
 	<dependencies>
 
 		<dependency>
@@ -53,13 +46,6 @@
 			<groupId>org.microemu</groupId>
 			<artifactId>microemu-jsr-82</artifactId>
 			<version>${org.microemu.version}</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.microedition</groupId>
-			<artifactId>jsr-179</artifactId>
-			<version>1.0.1</version>
 			<scope>provided</scope>
 		</dependency>
 

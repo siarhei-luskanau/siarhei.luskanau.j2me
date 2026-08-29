@@ -19,13 +19,6 @@
 		<j2me.midlet.profile>MIDP-2.0</j2me.midlet.profile>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>codecafe.dev-hda.com</id>
-			<url>http://codecafe.dev-hda.com/repository</url>
-		</repository>
-	</repositories>
-
 	<dependencies>
 
 		<dependency>
@@ -57,9 +50,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>javax.microedition</groupId>
-			<artifactId>jsr-179</artifactId>
-			<version>1.0.1</version>
+			<groupId>siarhei.luskanau.j2me</groupId>
+			<artifactId>siarhei.luskanau.j2me.jsr179</artifactId>
+			<version>0.0.1</version>
 			<scope>provided</scope>
 		</dependency>
 
